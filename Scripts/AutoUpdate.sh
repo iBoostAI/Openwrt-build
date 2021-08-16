@@ -1,5 +1,5 @@
 #!/bin/bash
-# AutoBuild Module <https://github.com/iboosting/Lean-AutoBuild>
+# AutoBuild <https://github.com/iboosting/Openwrt-build>, MOD of AutoBuild Module by Hyy2001
 # AutoUpdate for Openwrt
 # Dependences: bash wget-ssl/wget/uclient-fetch curl openssl jsonfilter
 
