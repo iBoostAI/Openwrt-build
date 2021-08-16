@@ -1,7 +1,4 @@
-# Actions for Building OpenWrt(Lean) for Newifi 3
-
-![GitHub Stars](https://img.shields.io/github/stars/iboosting/Openwrt-build.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/iboosting/Openwrt-build.svg?style=flat-square&label=Forks&logo=github)
+# Actions for Building Openwrt (Lean) for Newifi 3
 
 支持的设备: `d-team_newifi-d2`
 
