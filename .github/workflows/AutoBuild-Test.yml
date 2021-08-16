@@ -17,7 +17,7 @@ on:
         default: 'false'
       CONFIG_FILE:
         description: '调用的 [.config] 文件名称'
-        default: 'x86_64'
+        default: 'd-team_newifi-d2'
       DEFAULT_SOURCE:
         description: '源码:分支 [必选]'
         default: 'coolsnowwolf/lede:master'
