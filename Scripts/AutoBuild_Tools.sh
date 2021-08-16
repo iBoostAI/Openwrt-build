@@ -1,5 +1,5 @@
 #!/bin/bash
-# MOD AutoBuild Module by Hyy2001 <https://github.com/Hyy2001X/AutoBuild-Actions>
+# MOD of AutoBuild Module by Hyy2001 <https://github.com/Hyy2001X/AutoBuild-Actions>
 # AutoBuild_Tools for Openwrt
 # Dependences: bash wget curl block-mount e2fsprogs smartmontools
 
