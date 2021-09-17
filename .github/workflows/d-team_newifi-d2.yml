@@ -140,14 +140,7 @@ jobs:
       with:
         name: ${{ env.REPO_BRANCH }}_firmware_${{ env.Artifacts_Date }}
         path: openwrt/bin/Firmware
-
-    - name: Upload bin to Artifacts
-      uses: actions/upload-artifact@main
-      if: env.UPLOAD_BIN_ARTIFACTS == 'true' && env.Compile_Result == 'true' && !cancelled()
-      with:
-        name: ${{ env.REPO_BRANCH }}_bin_${{ env.Artifacts_Date }}
-        path: openwrt/bin
-        
+       
     - name: Get current time
       uses: iboosting/get-current-time@master
       id: current-time
@@ -161,21 +154,6 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: openwrt/bin/Firmware/*
-        file_glob: true
-        tag: ${{ steps.current-time.outputs.formattedTime }}
-        overwrite: true
-        
-    - name: Download Github Release API
-      if: env.UPLOAD_RELEASES == 'true' && env.Compile_Result == 'true' && !cancelled()
-      run: |
-        wget https://api.github.com/repos/${{github.repository}}/releases/tags/${{ steps.current-time.outputs.formattedTime }} -O API
-        
-    - name: Upload API to Github Release
-      if: env.UPLOAD_RELEASES == 'true' && env.Compile_Result == 'true' && !cancelled()
-      uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./API
         file_glob: true
         tag: ${{ steps.current-time.outputs.formattedTime }}
         overwrite: true
